@@ -107,8 +107,9 @@ group_annot <- as.data.frame(tibble::tibble(
 group_annot <- group_annot[,-1, drop = F]
 
 ## colors
-colours <- list("Groups" = c("rest" = "yellow",
-                            "C110" = "purple"))
+colours <- list("Groups" = c("rest" = "grey",
+                            "C110" = "yellow",
+                            "E72" = "purple"))
 
 ## annotation formation
 row_annot <- HeatmapAnnotation(df = group_annot,
@@ -116,7 +117,7 @@ row_annot <- HeatmapAnnotation(df = group_annot,
                                which = "row")
 
 ## splits
-split_reorder <- factor(group_annot$Groups, levels = c("C110","rest"))
+split_reorder <- factor(group_annot$Groups, levels = c("C110","E72","rest"))
 
 ### Do the heatmap
 hmap_rowise <- Heatmap(numeric_values, 
