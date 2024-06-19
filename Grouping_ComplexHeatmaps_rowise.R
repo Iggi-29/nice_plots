@@ -10,6 +10,7 @@ library(RColorBrewer)
 library(dplyr)
 library(ggplot2)
 library(tibble)
+setwd(dirname(getActiveDocumentContext()$path)) 
 
 ### sourcing of in-house functions
 source("./functions/dendo_info_extractor.R")
