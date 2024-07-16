@@ -56,6 +56,6 @@ dendo_info_extractor <- function(heatm,side,
   ###  element_data$cluster[k] <- col_list_dat$group[k][col_list_dat$element_number == element_data$element_number]}
   
   element_data <- element_data[,c(2,3)]
-  colnames(element_data)[2] <- grouped_element
+  colnames(element_data)[1] <- grouped_element
   return(element_data)
 }
